@@ -1,0 +1,93 @@
+Abb used-
+         Var ~ Variable
+         ph ~ Place holder
+         Str ~ string
+Add comments    1. single line    //
+                2. Multiline      /* Text */
+Line break/new line               \n
+Tab             1. horizontal     \t
+                2. Vertical       \v        
+Variables                         data_type Var = value;
+   Single character               char Var = 'Text';     ph = %c
+   String                         char Var[] = "Text";   ph = %s                   
+   Integer                        int Var = value;       ph = %d
+   Float/double                   float Var = value;     ph = %f/%lf
+   Bool(add #include <stdbool.h>) bool Var = true/false; ph = %d
+Display                           printf(" Text ");
+                With Var          printf("Text %ph", Var);
+Make Var constant                 const data_type Var = value;
+Functions (with printf statement)
+   1. Maths functions-
+      Power                       pow(Num1,Num2)
+      Square root                 sqrt(Num)
+      Round off                   round(Num)
+      Round down                  ceil(Num)
+      Round up                    floor(Num)
+      Modules                     fabs(Num)
+      many more like log(),sin(),cos() etc // need to use #include <math.h>  
+   2. Char functions-
+      Lower case                  tolower(Var)
+      Upper case                  toupper(Var)
+   3. String functions- (add #include <string.h>)
+      Lower case                  strlwr(Str)
+      Upper case                  strlwr(Str)
+      reverse                     strrev(Str)
+      Append Str2 to Str1 at end  strcat(Str1,Str2)
+      Append n char from Str2 to str1  strcat(Str1,Str2,n)
+      Copy Str2 to Str1           strcpy(Str1,Str2)
+      Copy n char from Str2 to Str1 strcpy(Str1,Str2,n)
+      Set all char og Str to *    strset(Str,'*')
+      Set first n of Str char to *  strset(Str,'*',n)
+      Str length                  strlen(Str)
+      Compare all Ste1 to Str2    strcmp(Str1,Str2)
+      Compare all Ste1 to Str2 ignoring case strcmpi(Str1,Str2)
+      Compare n Ste1 to Str2      strcmp(Str1,Str2,n)
+      Compare n Ste1 to Str2 ignoring case   stricmp(Str1,Str2,n)
+
+
+User input 
+   int                            int Var;
+                                  scan("%d", &Var);
+   string with single word        char Var[length];
+                                  scanf("%s",&Var);
+   String with more than 1 word   #include <string.h>
+                                  fgets(Var,length,stdin);
+                                  Var[strlen(Var)-1]='\0'; //This will remove new line char that is created by fgets
+Conditional statements            
+               1. if statement    if (condition){code}
+               2. elif statement  else if (condition){code}
+               3. else statement  else {code}
+Ternary operator (shortcut if if else) (condition) ? value if true :value if false
+
+Large Conditional statements      refer Switch.c file for more detail
+Logical operators -
+   AND                            &&
+   OR                             ||
+   NOT                            !
+Create function                   void funName(){code}//before main function
+Loops-
+   1. for loops                   for(int i = 1; condition for i; increment){code}
+   2. While loops                 while(condition){code}
+   3. do while loops (executes 1 time then check condition)   do{code}while(condition);
+   4. Nested loops                for(condition){
+                                       for(condition{code})
+                                    code}
+Arrays-
+   1. Number                      dataType Var[rows][columns] = {{R0C0,R0C1,..},{R1C0,R1C1...},...}
+   2. n Strings                   char Var[][n] = {"Str1","Str2",..."Strn"}
+Struct (classes of c)             refer struct file for more detail
+Data type nickname                typedef dataType newName[size];
+                                  newName Var = "hello";
+File
+   1. Open                        FILE *pointer = fopen("fileName.type","operation")
+      Operations  1. Write        FILE *pointer = fopen("fileName.type","w")
+                                  fprintf(pointer,"Text")
+                  2. Append       FILE *pointer = fopen("\nfileName.type","a")
+                                  fprintf(pointer,"Text to be added in existing file")
+                  3. Read         FILE *pointer = fopen("fileName.type","r")
+                                  
+   2. close                       fclose(pointer)
+   3. remove                      remove("fileName.type")
+
+
+
